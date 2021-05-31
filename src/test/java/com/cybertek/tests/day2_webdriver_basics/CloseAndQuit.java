@@ -2,6 +2,7 @@ package com.cybertek.tests.day2_webdriver_basics;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 public class CloseAndQuit {
@@ -20,7 +21,9 @@ public class CloseAndQuit {
         driver=new ChromeDriver();
         driver.navigate().to("http://practice.cybertekschool.com/open_new_tab");
         Thread.sleep(3000);
+
         driver.quit();
+
     }
 
 }

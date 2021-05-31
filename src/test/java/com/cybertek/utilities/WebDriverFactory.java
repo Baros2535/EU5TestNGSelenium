@@ -11,13 +11,13 @@ public class WebDriverFactory {
 
     public static WebDriver getDriver(String browserType){
         WebDriver driver= null;
-        switch (browserType.toUpperCase())
+        switch (browserType.toLowerCase())
         {
-            case "CHROME":
+            case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver =new ChromeDriver();
                 break;
-            case " FIREFOX":
+            case " firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver=new FirefoxDriver();
                 break;
