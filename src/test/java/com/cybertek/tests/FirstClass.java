@@ -11,6 +11,11 @@ public class FirstClass {
         System.out.println(faker.name().fullName());
         System.out.println(faker.harryPotter().character());
         System.out.println(faker.finance().creditCard(CreditCardType.VISA));
+    
+    }
+
+    public static void FirstClass(){
+
 
     }
 
