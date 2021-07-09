@@ -55,9 +55,9 @@ public class SelectDropdownTest {
         Assert.assertEquals(actualOption1,"Alaska","verifying");
 
         Thread.sleep(2000);
-        stateDropdown.selectByIndex(3);
+        stateDropdown.selectByIndex(1);
         String actualOption2=stateDropdown.getFirstSelectedOption().getText();
-        Assert.assertEquals(actualOption2,"Arizona","verifying");
+        Assert.assertEquals(actualOption2,"Alabama","verifying");
 
 
     }

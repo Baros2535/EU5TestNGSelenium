@@ -30,11 +30,12 @@ public class MultipleWindows {
      //   System.out.println("titleafterClick = " + driver.getTitle());
 
         String currentWindowHandle= driver.getWindowHandle();
-
+        System.out.println("driver.getWindowHandle()1 = " + driver.getWindowHandle());
         Set<String> windowHandles = driver.getWindowHandles();
 
         for (String windowHandle : windowHandles) {
             if (!windowHandle.equals(currentWindowHandle)){
+                System.out.println("driver.getWindowHandle() 2= " + driver.getWindowHandle());
                 driver.switchTo().window(windowHandle);
                 Thread.sleep(2000);
 
