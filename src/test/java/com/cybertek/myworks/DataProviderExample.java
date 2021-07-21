@@ -29,8 +29,8 @@ public class DataProviderExample {
         Thread.sleep(1000);
         driver.quit();
     }
-
-    @DataProvider
+    @DataProvider (name ="status_code_Values")
+  //  @DataProvider
     public Object[][] getData(){
         Object [][] status=new Object[4][2];
         status[0][0]="li>a[href*=\"status_codes/200\"]";
@@ -44,9 +44,10 @@ public class DataProviderExample {
         status[3][1]="This page returned a 500 status code";
 
         return status;
-
     }
-    @Test(dataProvider = "getData")
+
+    @Test(dataProvider = "status_code_Values")
+   // @Test(dataProvider = "getData")
     public void test1(String  statusCode,String statusError) throws InterruptedException {
         driver.get("http://practice.cybertekschool.com/");
         driver.findElement(By.xpath("//a[contains(text(),\"Status\")]")).click();
