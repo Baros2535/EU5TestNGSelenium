@@ -14,3 +14,4 @@ public class CalendarEventsPage extends BasePage {
     public WebElement createCalendarEvent;
 
 }
+
