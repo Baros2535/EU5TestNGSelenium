@@ -29,8 +29,8 @@ public class LoginPage {
     public WebElement loginBtn;
 
     public void login(String username,String password){
-    usernameInput.sendKeys(ConfigurationReader.get(username));
-    passwordInput.sendKeys(ConfigurationReader.get(password));
+    usernameInput.sendKeys(username);
+    passwordInput.sendKeys(password);
     loginBtn.click();
     }
 
@@ -43,6 +43,13 @@ public class LoginPage {
     public void loginAsDriver(){
         usernameInput.sendKeys(ConfigurationReader.get("driver_username"));
         passwordInput.sendKeys(ConfigurationReader.get("driver_password"));
+        loginBtn.click();
+
+    }
+    public void loginAsSalesManager(){
+
+        usernameInput.sendKeys(ConfigurationReader.get("salesmanager_username"));
+        passwordInput.sendKeys(ConfigurationReader.get("salesmanager_password"));
         loginBtn.click();
 
     }
